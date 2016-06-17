@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+    <h1>All the Kittens</h1>
+
+    <table>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            Environment
+          </th>
+        </tr>
+        <% kittens.forEach(function(kit) { %>
+        <tr>
+          <td>
+            <a href="/kittens/<%= kit.id %>">
+              <%= kit.name %>
+            </a>
+          </td>
+          <td>
+            <a href="/kittens/<%= kit.id %>">
+              <%= kit.environment %>
+            </a>
+          </td>
+        </tr>
+            <% }); %>
+      </table>
+
+
+    <a href="/kittens/new">Add a Kitten</a>
+  </body>
+</html>
